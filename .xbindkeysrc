@@ -1,0 +1,18 @@
+# Audio Keys
+
+"amixer -D default sset Master 5%-"
+  XF86AudioLowerVolume
+"amixer -D default sset Master 5%+"
+  XF86AudioRaiseVolume
+"amixer -D default sset Master toggle"
+  XF86AudioMute
+
+# Brightness Keys
+
+"xbacklight -dec 5"
+  XF86MonBrightnessDown
+"xbacklight -inc 5"
+  XF86MonBrightnessUp
+
+"/usr/bin/i3lock -i ~/Pictures/image.png"
+  XF86ScreenSaver
