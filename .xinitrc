@@ -11,7 +11,7 @@ synclient TouchPadOff=1
 
 # Wallpaper
 
-feh --bg-fill ~/Pictures/wallhaven-52938.jpg &
+feh --bg-fill ~/Pictures/wall.jpg &
 
 # xbindkeys
 

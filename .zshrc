@@ -86,3 +86,4 @@ alias update='sudo apt update && sudo apt upgrade'
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+alias fuck=vrms

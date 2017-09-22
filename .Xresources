@@ -19,7 +19,10 @@
  urxvt*cursorColor: #8c8c8c
 
  ! - font
- urxvt*font: 	xft:DejaVu Sans Mono: size=10
+ urxvt*font:   xft:Terminus: size=10
+! urxvt*font: 	xft:DejaVu Sans Mono: size=9
+!h urxvt*faceName: Terminus:size=20
+! urxvt*faceSize: 20
 
  !  - color scheme
  ! black + red
@@ -47,3 +50,30 @@
  ! bright-cyan + bright-white
  urxvt*color14:     #7D7DFB
  urxvt*color15:     #ffffff
+
+ ------------------------------------------------------------------------------
+ ! ROFI Color theme
+ ! ------------------------------------------------------------------------------
+
+ ! Use extended color scheme
+ rofi.color-enabled:                  true
+ ! Number of lines to display
+ rofi.lines:					   10 
+ ! Hide Scrollbar
+ rofi.hide-scrollbar:			   true
+ ! Terminal
+ rofi.terminal:				   urxvt
+ rofi.ssh-client:				   ssh
+ rofi.ssh-command:				   {terminal} -e {ssh-client} {host}
+ rofi.run-command:				   {cmd}
+ rofi.run-shell-command:			   {terminal} -e {cmd}
+ ! Color scheme for normal row
+ rofi.color-normal:                   argb:00000000, #1aa, argb:11FFFFFF, #1aa,#333
+ ! Color scheme for urgent row
+ rofi.color-urgent:                   argb:00000000, #f99, argb:11FFFFFF, #f99,#333
+ ! Color scheme for active row
+ rofi.color-active:                   argb:00000000, #aa1, argb:11FFFFFF, #aa1,#333
+ ! Color scheme window
+ rofi.color-window:                   argb:ee333333, #1aa,#1aa
+ ! Separator style (none, dash, solid)
+ rofi.separator-style:                dash
