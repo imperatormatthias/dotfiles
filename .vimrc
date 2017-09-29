@@ -2,7 +2,7 @@ execute pathogen#infect()
 syntax on
 set number
 set scrolloff=3
-colorscheme tayra
+colorscheme molokai
 set incsearch
 set nocp
 set tabstop=5

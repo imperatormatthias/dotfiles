@@ -206,7 +206,6 @@ assign [class="Steam"] $workspace10
 ############################################ Enable Floating #####
 
 for_window [class="Steam"] floating enable
-for_window [class="Skype"] floating enable
 for_window [class="qTox"] floating enable
 for_window [class="rdesktop"] floating disable
 for_window [class="xfreerdp"] floating disable
@@ -223,7 +222,6 @@ for_window [class="XCalc"] floating enable
 ###################################################### EXECS #####
 
 exec_always compton -D 5 -f
-exec_always skype
 exec thunderbird
 exec nm-applet
 
@@ -233,3 +231,4 @@ exec xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
 exec xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
 exec xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
 exec xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+
