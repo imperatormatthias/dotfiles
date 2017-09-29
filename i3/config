@@ -198,17 +198,12 @@ bar {
 #assign [class="google-chrome"] $workspace1
 assign [class="Chromium"] $workspace1
 assign [class="Thunderbird"] $workspace4
-assign [class="rdesktop"] $workspace8 
-assign [class="xfreerdp"] $workspace8
-assign [class="Skype"] $workspace9
 assign [class="Steam"] $workspace10
 
 ############################################ Enable Floating #####
 
 for_window [class="Steam"] floating enable
 for_window [class="qTox"] floating enable
-for_window [class="rdesktop"] floating disable
-for_window [class="xfreerdp"] floating disable
 for_window [title="Meeting"] floating enable
 for_window [title="Appointment"] floating enable
 for_window [class="Thunderbird" instance="Msgcompose"] floating enable
