@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/matsu/.oh-my-zsh
+export ZSH=/home/matsu/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +53,7 @@ plugins=(git debian nyan common-aliases)
 
 # User configuration
 
-  export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,8 +82,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias update='sudo apt update && sudo apt upgrade'
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
-alias fuck=vrms
+
+function sudoedit() {
+	   SUDO_COMMAND="sudoedit $@" command sudoedit "$@"
+}
