@@ -31,7 +31,6 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec urxvt
 
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wall.jpg
 # enable external monitor
 #bindsym XF86Display exec xrandr --output $IN --auto --primary --output $EXT --auto --right-of $IN
 bindsym XF86Display exec ~/monitor
@@ -163,35 +162,39 @@ bindsym $mod+r mode "resize"
 
 # Set Colours
 
-set $bg-color 	         #2f343f
+set_from_resource $fg i3wm.color7 #f3f4f5
+set_from_resource $bg i3wm.color2 #2f343f
+
+#set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
+#set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+client.focused          $bg			    $fg			   $bg  #00ff00
+client.unfocused        $bg			    $bg			   $fg #00ff00
+client.focused_inactive $bg			    $bg			   $fg #00ff00
+client.urgent           $bg			    $bg			   $fg  #00ff00
 
 hide_edge_borders both
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-     status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	font pango:Deja Vu Sans Mono 9	
-	colors {
-		background $bg-color
-	    	separator #757575
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
-	position top
-}
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#bar {
+#     status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#	font pango:Deja Vu Sans Mono 9	
+#	colors {
+#		background $bg-color
+#	    	separator #757575
+#		#                  border             background         text
+#		focused_workspace  $fg 			   $fg 			  $bg
+#		inactive_workspace $bg 			   $bg 			  $fg
+#		urgent_workspace   $bg 			   $bg 			  $fg
+#	}
+#	position top
+#}
 
 ###################################### Workspace Assignments #####
 
@@ -226,4 +229,6 @@ exec xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
 exec xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
 exec xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
 exec xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
-
+exec_always --no-startup-id xautolock -time 5 -locker $HOME/Programming/i3lockblur/i3lockblur.sh
+bindsym --release Print exec "scrot  $HOME'/Pictures/screenshots/%Y-%m-%d-%H%M%S_$wx$h_scrot.png'"
+bindsym Mod1+Sys_Req exec "scrot -u  $HOME'/Pictures/screenshots/%Y-%m-%d-%H%M%S_$wx$h_scrot.png'"

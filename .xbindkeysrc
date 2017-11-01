@@ -14,5 +14,5 @@
 "xbacklight -inc 5"
   XF86MonBrightnessUp
 
-"/usr/bin/i3lock -i ~/Pictures/image.png"
+"$HOME/Programming/i3lockblur/i3lockblur.sh"
   XF86ScreenSaver

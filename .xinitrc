@@ -21,8 +21,4 @@ xbindkeys &
 
 xrdb ~/.Xresources
 
-xmodmap -e "clear lock"
-xmodmap -e "keysym Caps_lock = Escape"
-
 exec dbus-launch i3
-
