@@ -7,6 +7,13 @@
 "amixer -D default sset Master toggle"
   XF86AudioMute
 
+"$HOME/scripts/mpc_toggle"
+  XF86AudioPlay
+"mpc next"
+  XF86AudioNext
+"mpc prev"
+  XF86AudioPrev
+
 # Brightness Keys
 
 "xbacklight -dec 5"
@@ -16,3 +23,8 @@
 
 "$HOME/Programming/i3lockblur/i3lockblur.sh"
   XF86ScreenSaver
+
+# External Display
+
+"$HOME/scripts/monitor"
+  XF86Display

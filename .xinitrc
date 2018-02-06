@@ -21,4 +21,9 @@ xbindkeys &
 
 xrdb ~/.Xresources
 
+xset +fp /home/matsu/.fonts
+xset +fp /home/matsu/.local/share/fonts
+xset +fp /usr/share/fonts
+xset fp rehash
+
 exec dbus-launch i3
